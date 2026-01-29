@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Prevent horizontal scrolling on small devices */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Responsive base font adjustments to avoid overflow */
+html {
+  font-size: 16px;
+}
+
+:root {
+  /* Global color palette - more colorful, harmonious accents */
+  --primary: #0b6e99; /* deep teal-blue */
+  --primary-2: #0ea5a4; /* cyan */
+  --primary-gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
+  --nav-opaque: rgba(11, 110, 153, 0.95);
+
+  --secondary: #7b2cbf; /* purple */
+  --accent1: #ff7a59; /* coral/orange */
+  --accent2: #ffd166; /* warm yellow */
+  --accent3: #6a9afc; /* soft blue */
+  --danger: #e63946; /* vivid red */
+
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #1e293b;
+  --muted: #6c757d;
+}
+
+/* optional combined accents */
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-gradient: linear-gradient(135deg, var(--accent1), var(--accent2));
+    --secondary-gradient: linear-gradient(135deg, rgba(123,44,191,0.08), rgba(106,154,252,0.08));
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
