@@ -54,6 +54,7 @@ function LandingPage() {
           <h1 className="hero-title">KH Patil Institute of Medical Sciences</h1>
           <p className="hero-subtitle">Malasamudra, Gadag, Karnataka</p>
           <p className="hero-motto">"Sarvejano Arogyam Bhavathu" - Well-being for all</p>
+          <p className="hero-subtitle">AGNEYA PRESENTS - KALA VAIBHAVA</p>
           <img src={agneyaImage} alt="KH Patil Institute" className="hero-image" />
           <button className="hero-cta-btn" onClick={handleEventsClick}>
             Explore Events →

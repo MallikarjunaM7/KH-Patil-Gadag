@@ -86,8 +86,8 @@ function EventDetails() {
         alert(`Participant ${i + 1}: Please enter a valid batch year`);
         return false;
       }
-      if (!participant.currentYear || participant.currentYear < 1 || participant.currentYear > 4) {
-        alert(`Participant ${i + 1}: Please enter a valid year (1-4)`);
+      if (!participant.currentYear || participant.currentYear < 1 || participant.currentYear > 5) {
+        alert(`Participant ${i + 1}: Please enter a valid year (1-5)`);
         return false;
       }
     }
@@ -260,6 +260,7 @@ function EventDetails() {
                     <option value="2">2nd Year</option>
                     <option value="3">3rd Year</option>
                     <option value="4">4th Year</option>
+                    <option value="5">Interns</option>
                   </select>
                 </div>
               </div>

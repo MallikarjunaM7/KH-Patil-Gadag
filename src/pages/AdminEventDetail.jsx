@@ -136,6 +136,7 @@ function AdminEventDetail() {
                                   {participant.currentYear === 2 && '2nd Year'}
                                   {participant.currentYear === 3 && '3rd Year'}
                                   {participant.currentYear === 4 && '4th Year'}
+                                  {participant.currentYear === 5 && 'Intern'}
                                 </span>
                               </td>
                             </tr>
