@@ -34,7 +34,7 @@ function EventDetails() {
   const fetchEventDetails = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:8080/event/get-event-by-id/${id}`);
+      const response = await axios.get(`https://kh-patil-gadag-server-production-03b7.up.railway.app/event/get-event-by-id/${id}`);
       if (response.data.success) {
         setEvent(response.data.data);
       }
@@ -110,7 +110,7 @@ function EventDetails() {
       };
 
       const response = await axios.post(
-        `http://localhost:8080/event/${id}/register`,
+        `https://kh-patil-gadag-server-production-03b7.up.railway.app/event/${id}/register`,
         registrationData
       );
 

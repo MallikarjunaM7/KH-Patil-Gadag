@@ -88,7 +88,7 @@ function CreateEvent() {
       };
 
       const response = await axios.post(
-        'http://localhost:8080/event/add-event',
+        'https://kh-patil-gadag-server-production-03b7.up.railway.app/event/add-event',
         eventData
       );
 

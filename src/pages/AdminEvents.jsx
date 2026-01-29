@@ -23,7 +23,7 @@ function AdminEvents() {
   const fetchEvents = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:8080/event/get-all-events');
+      const response = await axios.get('https://kh-patil-gadag-server-production-03b7.up.railway.app/event/get-all-events');
       if (response.data.success) {
         setEvents(response.data.data);
       }
@@ -44,7 +44,7 @@ function AdminEvents() {
     if (!confirmed) return;
 
     try {
-      const response = await axios.delete(`http://localhost:8080/event/delete-event-by-id/${eventId}`);
+      const response = await axios.delete(`https://kh-patil-gadag-server-production-03b7.up.railway.app/event/delete-event-by-id/${eventId}`);
       if (response.data.success) {
         alert('Event deleted successfully');
         fetchEvents();
