@@ -10,6 +10,8 @@ function AdminEvents() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+    const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
     // Check if admin is logged in
     if (localStorage.getItem('adminLoggedIn') !== 'true') {
@@ -23,7 +25,7 @@ function AdminEvents() {
   const fetchEvents = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('https://kh-patil-gadag-server-production-03b7.up.railway.app/event/get-all-events');
+      const response = await axios.get(`${API_BASE}/event/get-all-events`);
       if (response.data.success) {
         setEvents(response.data.data);
       }
@@ -44,7 +46,7 @@ function AdminEvents() {
     if (!confirmed) return;
 
     try {
-      const response = await axios.delete(`https://kh-patil-gadag-server-production-03b7.up.railway.app/event/delete-event-by-id/${eventId}`);
+      const response = await axios.delete(`${API_BASE}/event/delete-event-by-id/${eventId}`);
       if (response.data.success) {
         alert('Event deleted successfully');
         fetchEvents();

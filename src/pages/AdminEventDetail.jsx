@@ -11,6 +11,9 @@ function AdminEventDetail() {
   const [error, setError] = useState(null);
   const [expandedTeamId, setExpandedTeamId] = useState(null);
 
+  const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
+
   useEffect(() => {
     // Check if admin is logged in
     if (localStorage.getItem('adminLoggedIn') !== 'true') {
@@ -24,7 +27,7 @@ function AdminEventDetail() {
   const fetchEventDetail = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`https://kh-patil-gadag-server-production-03b7.up.railway.app/event/get-event-by-id/${id}`);
+      const response = await axios.get(`${API_BASE}/event/get-event-by-id/${id}`);
       if (response.data.success) {
         setEvent(response.data.data);
       }

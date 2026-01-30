@@ -9,6 +9,8 @@ function CreateEvent() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
 
+    const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
   const [formData, setFormData] = useState({
     name: '',
     description: '',
@@ -88,7 +90,7 @@ function CreateEvent() {
       };
 
       const response = await axios.post(
-        'https://kh-patil-gadag-server-production-03b7.up.railway.app/event/add-event',
+        `${API_BASE}/event/add-event`,
         eventData
       );
 

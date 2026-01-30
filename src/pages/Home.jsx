@@ -8,6 +8,8 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+    const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
     fetchEvents();
   }, []);
@@ -15,7 +17,7 @@ function Home() {
   const fetchEvents = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('https://kh-patil-gadag-server-production-03b7.up.railway.app/event/get-all-events');
+      const response = await axios.get(`${API_BASE}/event/get-all-events`);
       if (response.data.success) {
         setEvents(response.data.data);
       }
